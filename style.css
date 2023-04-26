@@ -1,0 +1,193 @@
+:root{
+    --border-default: 2px solid;
+}
+
+/*Variables for Kevin Powell this helped me alot gonna used it in future proyects*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: inherit;
+    max-width: 100%;
+}
+
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+}
+
+h1{
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1rem, 2rem, 2.5rem);
+}
+
+/*variables end*/
+
+body{
+    display: grid;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem;
+    font-weight: 700;
+}
+
+.container{
+    display: flex;
+}
+
+.general{
+    padding: 1rem;
+}
+
+.socios, .row, .propuestas, .mercado{
+    min-width: 20%;
+    min-height: 400px;
+    transition: visibility 0.5 ease;
+    visibility: hidden;
+}
+
+.actividades, .recursos, .clientes, .canales{
+    min-height: 50%;
+}
+
+.estructura, .fuentes{
+    min-width: 50%;
+    min-height: 150px;
+    visibility: hidden;
+}
+
+.vertical_line{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.texto{
+    width: 90%;
+}
+
+.lista{
+    text-align: left;
+}
+
+.hidden{
+    background-color: hsl(212, 52%, 85%);
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease-out;
+}
+
+.card1{
+    background-color: hsl(212, 52%, 85%);
+    visibility: visible;
+    animation: rotate1 1s linear normal;
+}
+
+@keyframes rotate1 {
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.card2{
+    background-color: hsl(212, 52%, 85%);
+    visibility: visible;
+    animation: rotate2 1s linear normal;
+}
+
+@keyframes rotate2 {
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.mercado, .propuestas{
+    border: var(--border-default);
+}
+
+.canales{
+    border-top: var(--border-default);
+    border-bottom: var(--border-default);
+}
+
+.clientes{
+    border-top: var(--border-default);
+}
+
+.actividades, .socios{
+    border-top: var(--border-default);
+    border-bottom: var(--border-default);
+    border-left: var(--border-default);
+}
+
+.recursos{
+    border-bottom: var(--border-default);
+    border-left: var(--border-default);
+}
+
+.fuentes{
+    border-right: var(--border-default);
+    border-bottom: var(--border-default);
+    border-left: var(--border-default);
+}
+
+.estructura{
+    border-bottom: var(--border-default);
+    border-left: var(--border-default);
+}
